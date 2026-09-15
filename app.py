@@ -24,6 +24,7 @@ def menu():
         \n
     ''')
 
+# - - estrutura/esqueleto dos pedidos - -
 class Pedidos:
     def __init__(self, Nome, Quantidade, Sabor):
         self.nome = Nome
@@ -35,14 +36,23 @@ lista_de_pedidos = []
 
 # - - função cadastrar pedidos - -
 def cadastrar_pedido():
-    nome = input('digite o nome do pedido: ') 
-    quantidade = input('Digite a quantidade de doces do pedido: ')
-    sabor = input('digite o sabor do pedido: ')
-    print('\n Pedido cadastrado com sucesso! \n')
-    sleep(1)
+    while True:
+        nome = input('digite o nome do pedido: ')
+        sleep(0.8)
+        quantidade = input('Digite a quantidade de doces do pedido: ')
+        sleep(0.8)
+        sabor = input('digite o sabor do pedido: ')
+        sleep(0.8)
 
-    pedido = Pedidos(nome, quantidade, sabor)
-    lista_de_pedidos.append(pedido)
+        # - Atribuição do objeto pedido - 
+        if not(nome == '' or quantidade == '' or sabor == ''):
+            pedido = Pedidos(nome, quantidade, sabor)
+            lista_de_pedidos.append(pedido)
+            print('Pedido adicionado com sucesso! ')
+            break
+        else:
+            print('Digite corretamente todos os campos!')
+
 
 # - - função que lista os produtos - -
 def listar_produtos():
@@ -59,19 +69,42 @@ def listar_produtos():
     else:
         print('Não existe pedidos para listar! \n')
         sleep(1)
-        
+
+# - - função de buscar um pedido - - 
+def buscar_pedido():
+    pedido_busca = input('Digite o nome do pedido para buscar: ')
+    for p in lista_de_pedidos:
+        if pedido_busca == p.nome:
+            print(f'''
+             nome do pedido: {p.nome}
+             quantidade do pedido {p.quantidade}
+             sabor do pedido" {p.sabor}
+            ''')
+        if not pedido_busca == p.nome:
+            print('Não foi possivel encontrar, tente novamente!')
+            sleep(1), print('\n')
+
 
 # - - loop de escolha do usuário - - 
 while True:
     menu()
-    escolha_usuario = int(input('Digite a opção que deseja: '))
+    escolha_usuario = None
+    while True:
+        try:
+            escolha_usuario = int(input('Digite a opção desejada: '))
+            break
+        except ValueError:
+            print('Por favor, digite corretamente.')
+            sleep(1), print('\n')
+            break
+         
     match escolha_usuario:
         case 1:
             cadastrar_pedido()
         case 2:
             listar_produtos()
         case 3:
-            ...
+            buscar_pedido()
         case 4:
             ...
         case 5:
@@ -82,7 +115,7 @@ while True:
             break
 
 
-#
+
 
 
 
