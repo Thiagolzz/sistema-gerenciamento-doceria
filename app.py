@@ -2,7 +2,6 @@
     # Cadastrar pedido
     # Listar pedidos
     # Buscar pedido
-    # Alterar status
     # Excluir pedido
     # Sair
 
@@ -18,9 +17,8 @@ def menu():
         1 - Cadastrar pedido
         2 - Listar pedidos
         3 - Buscar pedido
-        4 - Altera/Atualizar status
-        5 - Excluir pedido
-        6 - Sair --(0)--
+        4 - Excluir pedido
+        0 - Digite (0) para sair
         \n
     ''')
 
@@ -82,8 +80,8 @@ def buscar_pedido():
                 if pedido_busca == p.nome:
                     print(f'''
                     nome do pedido: {p.nome}
-                    quantidade do pedido {p.quantidade}
-                    sabor do pedido" {p.sabor}
+                    quantidade do pedido: {p.quantidade}
+                    sabor do pedido: {p.sabor}
                     ''')   
                     sleep(1)
                     break
@@ -91,11 +89,29 @@ def buscar_pedido():
         else:
             print('Não foi possivel ')
             sleep(1)
-    
+
+# função de excluir pedido 
+def excluir_pedido():
+        if not lista_de_pedidos:
+            print('Primeiro adicione algum pedido. ')
+            sleep(1)
+        for p in lista_de_pedidos:
+            while True:
+                exclusao_pedido = input('Digite o nome do pedido que deseja excluir ou (0) para sair: ')
+                if exclusao_pedido == p.nome:
+                    print(f'o pedido {p.nome} foi deletado! \n')
+                    lista_de_pedidos.remove(p)
+                    sleep(1.5)
+                    break
+                elif exclusao_pedido == '0':
+                    print('Você escolheu sair!')
+                    sleep(1)
+                    break
+                else:
+                    print('Digite um pedido válido!')
                 
 
-                    
-
+        
 # - - loop que roda menu e escolha usuario - - 
 while True:
     menu()
@@ -118,9 +134,7 @@ while True:
         case 3:
             buscar_pedido()
         case 4:
-            ...
-        case 5:
-            ...
+            excluir_pedido()
         case 0:
             print('Você escolheu sair! ')
             sleep(1)

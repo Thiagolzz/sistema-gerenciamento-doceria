@@ -6,7 +6,7 @@ Este projeto está sendo desenvolvido como forma de **prática e evolução na p
 
 ## 📌 Status do projeto
 
-🚧 **Em desenvolvimento — V1**
+🚧 **Em desenvolvimento — V2**
 
 ### Funcionalidades atuais
 
@@ -17,10 +17,6 @@ Este projeto está sendo desenvolvido como forma de **prática e evolução na p
 
 ### Próximas funcionalidades
 
-* [ ] Buscar pedido
-* [ ] Alterar/atualizar status
-* [ ] Excluir pedido
-* [ ] Melhorar a experiência do usuário
 * [ ] Persistência dos dados
 * [ ] Banco de dados
 
@@ -85,5 +81,6 @@ O projeto será evoluído gradualmente, adicionando novas funcionalidades e post
 * Cadastro de pedidos
 * Armazenamento das instâncias
 * Listagem dos pedidos
+* Exclusão de pedidos
 
 > Projeto em constante evolução.
