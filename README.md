@@ -1,86 +1,77 @@
 # 🍬 Sistema de Gerenciamento de Pedidos da Doceria
 
-Sistema desenvolvido em **Python** para gerenciamento de pedidos de uma doceria.
+Sistema desenvolvido em **Python** para o gerenciamento de pedidos de uma doceria, permitindo organizar e manipular pedidos por meio de um menu interativo no terminal.
 
-Este projeto está sendo desenvolvido como forma de **prática e evolução na programação**, aplicando conceitos de Python, Programação Orientada a Objetos (POO), estruturas de dados e organização de código.
+O projeto foi desenvolvido como prática de programação, com foco no aprimoramento da lógica, na aplicação de Programação Orientada a Objetos (POO) e na construção de funcionalidades utilizando Python.
 
-## 📌 Status do projeto
+## 🚀 Funcionalidades
 
-🚧 **Em desenvolvimento — V2**
+- [x] Cadastrar pedidos
+- [x] Armazenar pedidos em uma lista
+- [x] Listar pedidos cadastrados
+- [x] Buscar pedidos pelo nome
+- [x] Excluir pedidos
+- [x] Gerenciar pedidos por meio de um menu interativo
+- [x] Organizar o código utilizando funções e classes
 
-### Funcionalidades atuais
+## 🛠️ Tecnologias e conceitos utilizados
 
-* [x] Cadastrar pedido
-* [x] Armazenar pedidos em uma lista
-* [x] Criar pedidos utilizando classes e instâncias
-* [x] Listar pedidos cadastrados
+- **Python**
+- Programação Orientada a Objetos (POO)
+- Classes e instâncias
+- Atributos e métodos
+- Funções
+- Listas e manipulação de objetos
+- Estruturas condicionais
+- Laços de repetição (`for` e `while`)
+- Estrutura de seleção (`match-case`)
+- `enumerate()`
+- Entrada de dados com `input()`
+- Controle de versão com Git e GitHub
 
-### Próximas funcionalidades
+## 📋 Estrutura do sistema
 
-* [ ] Persistência dos dados
-* [ ] Banco de dados
+Cada pedido é representado por uma instância da classe `Pedidos`, que armazena as informações necessárias para seu gerenciamento.
 
-## 🛠️ Tecnologias utilizadas
+Os dados de cada pedido incluem:
 
-* **Python**
-* Programação Orientada a Objetos (POO)
-* Listas
-* Funções
-* `match-case`
-* `enumerate()`
+- **Nome**
+- **Quantidade**
+- **Sabor**
 
-## 🧠 Conceitos praticados
-
-O projeto utiliza conceitos como:
-
-* Classes
-* Instâncias
-* Atributos
-* Métodos
-* Funções
-* Listas
-* Estruturas condicionais
-* Laços de repetição
-* Entrada de dados com `input()`
-* Organização e reutilização de código
-
-## 📋 Estrutura atual
-
-Cada pedido é representado por uma instância da classe `Pedidos`, contendo:
-
-* Nome
-* Quantidade
-* Sabor
-
-Os pedidos são armazenados em uma lista:
+Os pedidos são armazenados em uma lista Python:
 
 ```python
 lista_de_pedidos = []
 ```
 
-Ao cadastrar um pedido, uma nova instância é criada e adicionada à lista:
+Ao cadastrar um novo pedido, uma instância da classe `Pedidos` é criada e adicionada à lista utilizando o método `append()`.
 
-```python
-pedido = Pedidos(nome, quantidade, sabor)
-lista_de_pedidos.append(pedido)
-```
+A aplicação utiliza funções específicas para executar as operações disponíveis, contribuindo para a organização e a reutilização do código.
 
-## 🎯 Objetivo
+## 🎯 Objetivo do projeto
 
-O objetivo principal é desenvolver um sistema simples de gerenciamento de pedidos enquanto pratico e consolido conhecimentos em Python e POO.
+Desenvolver uma aplicação funcional para praticar os fundamentos da programação, consolidar conhecimentos em Python e aplicar conceitos de POO na resolução de um problema prático.
 
-O projeto será evoluído gradualmente, adicionando novas funcionalidades e posteriormente novos recursos, como persistência de dados e banco de dados.
+O projeto também proporcionou experiência com a implementação gradual de funcionalidades, a organização do código e o uso do Git e GitHub para acompanhar sua evolução.
 
 ## 📈 Evolução do projeto
 
-### V1 — Início do projeto
+**V1 — Estrutura inicial**
+- Criação do menu principal.
+- Implementação da classe `Pedidos`.
+- Cadastro e listagem de pedidos.
+- Armazenamento de objetos em uma lista.
 
-* Estrutura inicial do sistema
-* Menu de opções
-* Classe `Pedidos`
-* Cadastro de pedidos
-* Armazenamento das instâncias
-* Listagem dos pedidos
-* Exclusão de pedidos
+**V2 — Expansão das funcionalidades**
+- Implementação da busca de pedidos.
+- Implementação da exclusão de pedidos.
+- Aprimoramento da organização do código e da interação com o usuário.
 
-> Projeto em constante evolução.
+---
+
+**Status:** Projeto concluído.
+
+Desenvolvido como projeto pessoal de aprendizado em Python e Programação Orientada a Objetos.
+
+Thiago Dev
